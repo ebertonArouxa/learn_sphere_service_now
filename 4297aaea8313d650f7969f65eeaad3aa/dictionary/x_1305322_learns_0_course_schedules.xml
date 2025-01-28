@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="37caf93683131a50f7969f65eeaad32a" label="Course schedules" max_length="40" name="x_1305322_learns_0_course_schedules" type="collection">
+        <element label="Course" max_length="32" name="course" reference="x_1305322_learns_0_courses" type="reference"/>
+        <element display="true" label="Name" max_length="250" name="name" type="string"/>
+        <element label="Max seats" max_length="40" name="max_seats" type="integer"/>
+        <element label="Instructor" max_length="32" name="instructor" reference="sys_user" reference_qual="javascript:new x_1305322_learns_0.LearnSphereUtils().getInstructorsUser();" type="reference" use_reference_qualifier="advanced"/>
+        <element label="Date" max_length="40" name="date" type="glide_date"/>
+        <index name="index">
+            <element name="course"/>
+        </index>
+        <index name="index2">
+            <element name="instructor"/>
+        </index>
+    </element>
+</database>

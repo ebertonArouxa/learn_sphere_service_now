@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1305322_learns_0.LearnSphereUtils</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>LearnSphereUtils</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var LearnSphereUtils = Class.create();
+LearnSphereUtils.prototype = {
+    initialize: function() {
+    },
+	refInstructors: function() {
+		var grRole = new GlideRecord('sys_user_has_role');
+		grRole.addEncodedQuery('roles=x_1305322_learns_0.ls_course_instructor^active=true');
+		grRole.query();
+
+		var instructors = [];
+
+		while(grRole.next()) {
+			instructors.push(grRole.getValue('user'));
+		}
+
+		return 'sys_idIN' + instructors;
+	},
+    type: 'LearnSphereUtils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-28 15:18:46</sys_created_on>
+        <sys_id>df57ae7e83d31a50f7969f65eeaad303</sys_id>
+        <sys_mod_count>20</sys_mod_count>
+        <sys_name>LearnSphereUtils</sys_name>
+        <sys_package display_value="LearnSphere" source="x_1305322_learns_0">4297aaea8313d650f7969f65eeaad3aa</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="LearnSphere">4297aaea8313d650f7969f65eeaad3aa</sys_scope>
+        <sys_update_name>sys_script_include_df57ae7e83d31a50f7969f65eeaad303</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-28 19:35:21</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="DELETE">
+        <id>df57ae7e83d31a50f7969f65eeaad303</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-28 15:18:45</sys_created_on>
+        <sys_id>8ba762be83d31a50f7969f65eeaad3fe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-28 15:18:45</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="LearnSphere">4297aaea8313d650f7969f65eeaad3aa</application>
+        <file_path/>
+        <instance_id>61f7defadb3d3190ae4c9027c596193b</instance_id>
+        <instance_name>dev185237</instance_name>
+        <name>sys_script_include_df57ae7e83d31a50f7969f65eeaad303</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_1305322_learns_0.LearnSphereUtils&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;description/&gt;&lt;mobile_callable&gt;false&lt;/mobile_callable&gt;&lt;name&gt;LearnSphereUtils&lt;/name&gt;&lt;sandbox_callable&gt;false&lt;/sandbox_callable&gt;&lt;script&gt;&lt;![CDATA[var LearnSphereUtils = Class.create();
+LearnSphereUtils.prototype = {
+    initialize: function() {
+    },
+	refInstructors: function() {
+		var grRole = new GlideRecord('sys_user_has_role');
+		grRole.addEncodedQuery('roles=x_1305322_learns_0.ls_course_instructor^active=true');
+		grRole.query();
+
+		var instructors = [];
+
+		while(grRole.next()) {
+			instructors.push(grRole.getValue('user'));
+		}
+
+		return 'sys_idIN' + instructors;
+	},
+    type: 'LearnSphereUtils'
+};]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-01-28 15:18:46&lt;/sys_created_on&gt;&lt;sys_id&gt;df57ae7e83d31a50f7969f65eeaad303&lt;/sys_id&gt;&lt;sys_mod_count&gt;20&lt;/sys_mod_count&gt;&lt;sys_name&gt;LearnSphereUtils&lt;/sys_name&gt;&lt;sys_package display_value="LearnSphere" source="x_1305322_learns_0"&gt;4297aaea8313d650f7969f65eeaad3aa&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="LearnSphere"&gt;4297aaea8313d650f7969f65eeaad3aa&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_df57ae7e83d31a50f7969f65eeaad303&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-01-28 19:35:21&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;sys_es_latest_script action="INSERT_OR_UPDATE"&gt;&lt;id&gt;df57ae7e83d31a50f7969f65eeaad303&lt;/id&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-01-28 15:18:45&lt;/sys_created_on&gt;&lt;sys_id&gt;8ba762be83d31a50f7969f65eeaad3fe&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-01-28 15:18:45&lt;/sys_updated_on&gt;&lt;table&gt;sys_script_include&lt;/table&gt;&lt;use_es_latest&gt;true&lt;/use_es_latest&gt;&lt;/sys_es_latest_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>543802724</payload_hash>
+        <record_name>LearnSphereUtils</record_name>
+        <reverted_from/>
+        <source>5298aeaa8313d650f7969f65eeaad396</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-28 19:35:21</sys_created_on>
+        <sys_id>7962af76831b1a50f7969f65eeaad3bf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>194ae69420c0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-28 19:35:21</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>fd62af76991b1a50e2902909d3cb09be</update_guid>
+        <update_guid_history>fd62af76991b1a50e2902909d3cb09be:543802724,d1f0e3368b1b1a50e80699f873c231c6:793887867,2930a7f2dd1b1a507426f196ffa61d29:543802724,b6cd5ffe13d71a50880a52fb9d8120e7:-1530638666,dc541bf289d71a503a53ee6138821e76:-699410055,7d5483fe7f571a5014f460db87665ae4:-1684439230,714eb2ba02571a50e7836add11f44f9f:1401500576,a42e3a3a3d571a50f66131f16f94c4f4:-1633746828,f0ec763a04571a5016a965c4a6757ec2:270740294,de45bebe93171a50bac9d6902ca88624:477428255,89053abe3e171a5045d5a89ecfbb73d3:-1258340583,5e44be3e44171a50ce7c8466d0aa3830:303165605,b904be3e4c171a50ee4e36ea7cca1565:2128973936,9c73723e46171a509c4aec4c6d3532be:303165605,dad2723e7c171a505522791a60602b92:517491987,6990fa3aa7171a50ad8153d9ef0109cf:1158258379,c52ea6f2d8171a506e7be9ac63801f39:1974900087,a4ea2e3230171a50f65550040e23efd1:300012313,3aa92e327d171a504e5c272f0a7c4a73:-1098086063,9f186abeb2d31a50b1e11ec7c8daf880:522380281,63a726befdd31a50e1d4e8702e20e91d:774178454</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-28 19:37:06</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>466238b0799449ac9066bdb64f4d58a4</sys_id>
+        <sys_metadata>df57ae7e83d31a50f7969f65eeaad303</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>LearnSphereUtils</sys_name>
+        <sys_package display_value="LearnSphere" source="x_1305322_learns_0">4297aaea8313d650f7969f65eeaad3aa</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="LearnSphere">4297aaea8313d650f7969f65eeaad3aa</sys_scope>
+        <sys_scope_delete display_value="">0033d291911445c480c71bd7586e01c9</sys_scope_delete>
+        <sys_update_name>sys_script_include_df57ae7e83d31a50f7969f65eeaad303</sys_update_name>
+        <sys_update_version display_value="sys_script_include_df57ae7e83d31a50f7969f65eeaad303">7962af76831b1a50f7969f65eeaad3bf</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-28 19:37:06</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

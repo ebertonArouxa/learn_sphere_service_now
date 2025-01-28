@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-28 15:18:47</sys_created_on>
+        <sys_id>eba726be83d31a50f7969f65eeaad317</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>LearnSphereUtils.admin</sys_name>
+        <sys_package display_value="LearnSphere" source="x_1305322_learns_0">4297aaea8313d650f7969f65eeaad3aa</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="LearnSphere">4297aaea8313d650f7969f65eeaad3aa</sys_scope>
+        <sys_security_acl display_value="LearnSphereUtils">9fa7e67e83d31a50f7969f65eeaad357</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_eba726be83d31a50f7969f65eeaad317</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-28 15:18:47</sys_updated_on>
+        <sys_user_role display_value="admin" name="admin">2831a114c611228501d4ea6c309d626d</sys_user_role>
+    </sys_security_acl_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="LearnSphere">4297aaea8313d650f7969f65eeaad3aa</application>
+        <file_path/>
+        <instance_id>61f7defadb3d3190ae4c9027c596193b</instance_id>
+        <instance_name>dev185237</instance_name>
+        <name>sys_security_acl_role_eba726be83d31a50f7969f65eeaad317</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-01-28 15:18:47</sys_created_on><sys_id>eba726be83d31a50f7969f65eeaad317</sys_id><sys_mod_count>0</sys_mod_count><sys_name>LearnSphereUtils.admin</sys_name><sys_package display_value="LearnSphere" source="x_1305322_learns_0">4297aaea8313d650f7969f65eeaad3aa</sys_package><sys_policy/><sys_scope display_value="LearnSphere">4297aaea8313d650f7969f65eeaad3aa</sys_scope><sys_security_acl display_value="LearnSphereUtils">9fa7e67e83d31a50f7969f65eeaad357</sys_security_acl><sys_update_name>sys_security_acl_role_eba726be83d31a50f7969f65eeaad317</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-01-28 15:18:47</sys_updated_on><sys_user_role display_value="admin" name="admin">2831a114c611228501d4ea6c309d626d</sys_user_role></sys_security_acl_role></record_update>]]></payload>
+        <payload_hash>1280007897</payload_hash>
+        <record_name>LearnSphereUtils.admin</record_name>
+        <reverted_from/>
+        <source>5298aeaa8313d650f7969f65eeaad396</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-28 15:18:47</sys_created_on>
+        <sys_id>6fa726be83d31a50f7969f65eeaad31b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>194ad7e5c880000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-28 15:18:47</sys_updated_on>
+        <type>Access Roles</type>
+        <update_guid>63a726beb8d31a506cd4e596b5bfaa1b</update_guid>
+        <update_guid_history>63a726beb8d31a506cd4e596b5bfaa1b:1280007897</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="LearnSphereUtils.admin">dfb2e7f6831b1a50f7969f65eeaad312</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-28 19:36:49</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>81f8f1a2987c4b0797edc9fb1427f9a1</sys_id>
+        <sys_metadata>eba726be83d31a50f7969f65eeaad317</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>LearnSphereUtils.admin</sys_name>
+        <sys_package display_value="LearnSphere" source="x_1305322_learns_0">4297aaea8313d650f7969f65eeaad3aa</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="LearnSphere">4297aaea8313d650f7969f65eeaad3aa</sys_scope>
+        <sys_scope_delete display_value="">0033d291911445c480c71bd7586e01c9</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_eba726be83d31a50f7969f65eeaad317</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_eba726be83d31a50f7969f65eeaad317">6fa726be83d31a50f7969f65eeaad31b</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-28 19:36:49</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
