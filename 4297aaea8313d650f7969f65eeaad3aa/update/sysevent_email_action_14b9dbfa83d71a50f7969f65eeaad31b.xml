@@ -36,7 +36,7 @@
         <item_table/>
         <mandatory>false</mandatory>
         <message/>
-        <message_html><![CDATA[<p>Dear ${opened_by},</p>
+        <message_html><![CDATA[<p>Dear ${student},</p>
 <p>We are pleased to inform you that we have received your enrollment request. Your application is currently under review and awaiting approval.</p>
 <p>Once your enrollment has been approved, we will notify you via email with further instructions and details. If you have any questions or need assistance in the meantime, feel free to contact us.</p>
 <p>Thank you for choosing LearnSphere. We look forward to having you on board!</p>]]></message_html>
@@ -46,14 +46,14 @@
         <omit_watermark>false</omit_watermark>
         <order>100</order>
         <push_message_only>false</push_message_only>
-        <recipient_fields>opened_by</recipient_fields>
+        <recipient_fields>student</recipient_fields>
         <recipient_groups/>
         <recipient_users/>
         <reply_to>learnsphere@aoop.com.br</reply_to>
         <send_self>true</send_self>
         <sms_alternate/>
         <style/>
-        <subject>${number} - Enrollment requested</subject>
+        <subject>${number} - ${schedule} - Enrollment requested</subject>
         <subscribable>false</subscribable>
         <sys_class_name>sysevent_email_action</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -61,7 +61,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>14b9dbfa83d71a50f7969f65eeaad31b</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Enrollment requested</sys_name>
         <sys_overrides/>
         <sys_package display_value="LearnSphere" source="x_1305322_learns_0">4297aaea8313d650f7969f65eeaad3aa</sys_package>
@@ -69,7 +69,7 @@
         <sys_scope display_value="LearnSphere">4297aaea8313d650f7969f65eeaad3aa</sys_scope>
         <sys_update_name>sysevent_email_action_14b9dbfa83d71a50f7969f65eeaad31b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-28 19:02:24</sys_updated_on>
+        <sys_updated_on>2025-01-29 19:48:29</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>
