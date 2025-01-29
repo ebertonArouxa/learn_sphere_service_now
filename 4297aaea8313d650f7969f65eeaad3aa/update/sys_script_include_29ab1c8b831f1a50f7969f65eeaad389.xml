@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_1305322_learns_0.LearnSphereDuplicate</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>LearnSphereDuplicate</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var LearnSphereDuplicate = Class.create();
+LearnSphereDuplicate.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	getDuplicateSchedule: function() {
+		var schedule = this.getParameter('sysparm_scheduleName');
+		if (schedule) {
+			var grSchedule = new GlideRecord('x_1305322_learns_0_course_schedules');
+			grSchedule.addEncodedQuery('name=' + schedule);
+			grSchedule.query();
+
+			if (grSchedule.next()) {
+				return 'true';
+			}
+			return 'false';
+		}
+	},
+    type: 'LearnSphereDuplicate'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-28 23:45:28</sys_created_on>
+        <sys_id>29ab1c8b831f1a50f7969f65eeaad389</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>LearnSphereDuplicate</sys_name>
+        <sys_package display_value="LearnSphere" source="x_1305322_learns_0">4297aaea8313d650f7969f65eeaad3aa</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="LearnSphere">4297aaea8313d650f7969f65eeaad3aa</sys_scope>
+        <sys_update_name>sys_script_include_29ab1c8b831f1a50f7969f65eeaad389</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-29 00:00:53</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>29ab1c8b831f1a50f7969f65eeaad389</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-28 23:45:51</sys_created_on>
+        <sys_id>93bb544f831f1a50f7969f65eeaad35e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-28 23:45:51</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>
