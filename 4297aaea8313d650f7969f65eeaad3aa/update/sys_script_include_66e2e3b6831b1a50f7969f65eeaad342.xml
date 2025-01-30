@@ -11,75 +11,91 @@
         <sandbox_callable>false</sandbox_callable>
         <script><![CDATA[var LearnSphereUtils = Class.create();
 LearnSphereUtils.prototype = {
-    initialize: function() {
+    initialize: function() {},
+    getInstructorsUser: function() {
+        var grInstructorRole = new GlideRecord('sys_user_has_role');
+        grInstructorRole.addEncodedQuery('role.name=x_1305322_learns_0.ls_course_instructor^state=active');
+        grInstructorRole.query();
+
+        var instructorUsers = [];
+
+        while (grInstructorRole.next()) {
+            instructorUsers.push(grInstructorRole.getValue('user'));
+        }
+
+        return 'sys_idIN' + instructorUsers;
     },
-	getInstructorsUser: function() {
-		var grInstructorRole = new GlideRecord('sys_user_has_role');
-		grInstructorRole.addEncodedQuery('role.name=x_1305322_learns_0.ls_course_instructor^state=active');
-		grInstructorRole.query();
+    getPossiblesEnrollments: function() {
+        var enrollmentsNotToBeShown = [];
+        var courseEnrollmentsCount = {};
+        var courseEnrollmentsSeats = {};
 
-		var instructorUsers = [];
+        var grEnrollments = new GlideRecord('x_1305322_learns_0_enrollments');
+        grEnrollments.addEncodedQuery('studentDYNAMIC90d1921e5f510100a9ad2572f2b477fe^state!=4');
+        grEnrollments.query();
 
-		while(grInstructorRole.next()) {
-			instructorUsers.push(grInstructorRole.getValue('user'));
-		}
+        while (grEnrollments.next()) {
+            var courseId = grEnrollments.schedule.course.sys_id.toString();
 
-		return 'sys_idIN' + instructorUsers;
-	},
-	getPossiblesEnrollments: function () {
-		var enrollmentsNotToBeShown = [];
-		var courseEnrollmentsCount = {};
+            enrollmentsNotToBeShown.push(grEnrollments.schedule.sys_id.toString());
 
-		var grEnrollments = new GlideRecord('x_1305322_learns_0_enrollments');
-		grEnrollments.addEncodedQuery('studentDYNAMIC90d1921e5f510100a9ad2572f2b477fe^state!=4');
-		grEnrollments.query();
-		
-		while(grEnrollments.next()) {
-			var courseId = grEnrollments.schedule.course.sys_id.toString();
+            if (!courseEnrollmentsCount[courseId]) {
+                courseEnrollmentsCount[courseId] = 0;
+            }
+            courseEnrollmentsCount[courseId]++;
+        }
 
-			enrollmentsNotToBeShown.push(grEnrollments.schedule.sys_id.toString());
+        var grEnrollmentsSeats = new GlideAggregate('x_1305322_learns_0_enrollments');
+        grEnrollmentsSeats.addAggregate('COUNT', 'schedule');
+        grEnrollmentsSeats.groupBy('schedule');
+        grEnrollmentsSeats.query();
 
-			if (!courseEnrollmentsCount[courseId]) {
-				courseEnrollmentsCount[courseId] = 0;
-			}
-			courseEnrollmentsCount[courseId] ++;
-		}
+        while (grEnrollmentsSeats.next()) {
+            var enrollmentID = grEnrollmentsSeats.getValue('schedule');
+            var enrollmentSeats = grEnrollmentsSeats.getAggregate('COUNT', 'schedule');
 
-		var enrollmentsToBeShown = [];
-		var grSchedule = new GlideRecord('x_1305322_learns_0_course_schedules');
-		grSchedule.addEncodedQuery('instructor!=' + gs.getUserID().toString() + '^date>javascript:gs.endOfToday()');
-		grSchedule.query();
+            courseEnrollmentsSeats[enrollmentID] = enrollmentSeats;
+        }
 
-		while(grSchedule.next()) {
-			var scheduleCourseId = grSchedule.course.sys_id.toString();
+        var enrollmentsToBeShown = [];
+        var grSchedule = new GlideRecord('x_1305322_learns_0_course_schedules');
+        grSchedule.addEncodedQuery('instructor!=' + gs.getUserID().toString() + '^date>javascript:gs.endOfToday()');
+        grSchedule.query();
 
-			if (enrollmentsNotToBeShown.indexOf(grSchedule.getUniqueValue()) == -1) {
-				if (!courseEnrollmentsCount[scheduleCourseId] || courseEnrollmentsCount[scheduleCourseId] < 3) {
-					enrollmentsToBeShown.push("sys_id=" + grSchedule.getUniqueValue().toString() + "^OR");
-				}
-			}
-		}
+        while (grSchedule.next()) {
+            var scheduleCourseId = grSchedule.course.sys_id.toString();
+            var scheduleId = grSchedule.sys_id.toString();
+            var scheduleMaxSeats = grSchedule.max_seats.toString();
 
-		if (enrollmentsToBeShown.join('').slice(0, -3) == '') {
-			return 'name=jskdhfbakjldfhskla';
-		}
+            if (enrollmentsNotToBeShown.indexOf(grSchedule.getUniqueValue()) == -1) {
+                if (!courseEnrollmentsCount[scheduleCourseId] || courseEnrollmentsCount[scheduleCourseId] < 3) {
+                    if (!courseEnrollmentsSeats[scheduleId] || courseEnrollmentsSeats[scheduleId] < scheduleMaxSeats) {
+                        enrollmentsToBeShown.push("sys_id=" + grSchedule.getUniqueValue().toString() + "^OR");
+                    }
+                }
+            }
+        }
 
-		return enrollmentsToBeShown.join('').slice(0, -3);
-	},
+        if (enrollmentsToBeShown.join('').slice(0, -3) == '') {
+            return 'name=jskdhfbakjldfhskla';
+        }
+
+        return enrollmentsToBeShown.join('').slice(0, -3);
+    },
     type: 'LearnSphereUtils'
 };]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-01-28 19:43:49</sys_created_on>
         <sys_id>66e2e3b6831b1a50f7969f65eeaad342</sys_id>
-        <sys_mod_count>29</sys_mod_count>
+        <sys_mod_count>37</sys_mod_count>
         <sys_name>LearnSphereUtils</sys_name>
         <sys_package display_value="LearnSphere" source="x_1305322_learns_0">4297aaea8313d650f7969f65eeaad3aa</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="LearnSphere">4297aaea8313d650f7969f65eeaad3aa</sys_scope>
         <sys_update_name>sys_script_include_66e2e3b6831b1a50f7969f65eeaad342</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-01-29 21:07:37</sys_updated_on>
+        <sys_updated_on>2025-01-30 15:54:30</sys_updated_on>
     </sys_script_include>
     <sys_es_latest_script action="INSERT_OR_UPDATE">
         <id>66e2e3b6831b1a50f7969f65eeaad342</id>

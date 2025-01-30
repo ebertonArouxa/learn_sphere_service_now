@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="f8ebb1b683131a50f7969f65eeaad32e" extends="task" label="Enrollments" max_length="40" name="x_1305322_learns_0_enrollments" type="collection">
         <element label="Student" max_length="32" name="student" reference="sys_user" type="reference"/>
-        <element label="Schedule" max_length="32" name="schedule" reference="x_1305322_learns_0_course_schedules" reference_qual="javascript:new x_1305322_learns_0.LearnSphereUtils().getPossiblesEnrollments();" type="reference" use_reference_qualifier="advanced"/>
+        <element label="Schedule" max_length="32" name="schedule" reference="x_1305322_learns_0_course_schedules" type="reference"/>
     </element>
 </database>
