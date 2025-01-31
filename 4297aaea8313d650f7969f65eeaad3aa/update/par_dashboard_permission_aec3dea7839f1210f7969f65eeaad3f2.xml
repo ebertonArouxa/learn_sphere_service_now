@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_permission">
+    <par_dashboard_permission action="INSERT_OR_UPDATE">
+        <can_read>true</can_read>
+        <can_share>false</can_share>
+        <can_write>false</can_write>
+        <dashboard display_value="LearnSphere course">27d0d263839f1210f7969f65eeaad3a5</dashboard>
+        <group/>
+        <owner>false</owner>
+        <role display_value="x_1305322_learns_0.ls_courses_admin" name="x_1305322_learns_0.ls_courses_admin">2c7fb97a83131a50f7969f65eeaad3ec</role>
+        <sys_class_name>par_dashboard_permission</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-30 21:47:20</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>aec3dea7839f1210f7969f65eeaad3f2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>27d0d263839f1210f7969f65eeaad3a5</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="LearnSphere" source="x_1305322_learns_0">4297aaea8313d650f7969f65eeaad3aa</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="LearnSphere">4297aaea8313d650f7969f65eeaad3aa</sys_scope>
+        <sys_update_name>par_dashboard_permission_aec3dea7839f1210f7969f65eeaad3f2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-30 21:47:20</sys_updated_on>
+        <user/>
+    </par_dashboard_permission>
+</record_update>

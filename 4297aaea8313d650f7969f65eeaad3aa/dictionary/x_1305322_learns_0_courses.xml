@@ -3,7 +3,7 @@
         <element label="integration error message" max_length="5000" name="integration_error_message" type="string"/>
         <element display="true" label="Name" max_length="250" name="name" type="string"/>
         <element label="Description en" max_length="5000" name="description_en" type="string"/>
-        <element label="Integration state" max_length="40" name="integration_state" type="choice">
+        <element choice="3" default="1" label="Integration state" max_length="40" name="integration_state" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Integrating" sequence="200" value="2"/>
                 <element inactive_on_update="false" label="Starting" sequence="100" value="1"/>
