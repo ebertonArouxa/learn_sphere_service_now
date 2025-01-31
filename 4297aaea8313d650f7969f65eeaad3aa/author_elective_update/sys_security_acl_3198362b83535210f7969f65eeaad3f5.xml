@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="DELETE">
+        <active>false</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>false</advanced>
+        <applies_to/>
+        <condition/>
+        <decision_type>allow</decision_type>
+        <description/>
+        <local_or_existing>Local</local_or_existing>
+        <name>task_sla</name>
+        <operation display_value="report_view">0997ab83733303005978e4b9cdf6a7b9</operation>
+        <script/>
+        <security_attribute/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-31 00:28:08</sys_created_on>
+        <sys_id>3198362b83535210f7969f65eeaad3f5</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>task_sla</sys_name>
+        <sys_package display_value="LearnSphere" source="x_1305322_learns_0">4297aaea8313d650f7969f65eeaad3aa</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="LearnSphere">4297aaea8313d650f7969f65eeaad3aa</sys_scope>
+        <sys_update_name>sys_security_acl_3198362b83535210f7969f65eeaad3f5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-31 13:11:19</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="LearnSphere">4297aaea8313d650f7969f65eeaad3aa</application>
+        <file_path/>
+        <instance_id>61f7defadb3d3190ae4c9027c596193b</instance_id>
+        <instance_name>dev185237</instance_name>
+        <name>sys_security_acl_3198362b83535210f7969f65eeaad3f5</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>false</active><admin_overrides>true</admin_overrides><advanced>false</advanced><applies_to/><condition/><decision_type>allow</decision_type><description/><local_or_existing>Local</local_or_existing><name>task_sla</name><operation display_value="report_view">0997ab83733303005978e4b9cdf6a7b9</operation><script/><security_attribute/><sys_class_name>sys_security_acl</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-01-31 00:28:08</sys_created_on><sys_id>3198362b83535210f7969f65eeaad3f5</sys_id><sys_mod_count>1</sys_mod_count><sys_name>task_sla</sys_name><sys_package display_value="LearnSphere" source="x_1305322_learns_0">4297aaea8313d650f7969f65eeaad3aa</sys_package><sys_policy/><sys_scope display_value="LearnSphere">4297aaea8313d650f7969f65eeaad3aa</sys_scope><sys_update_name>sys_security_acl_3198362b83535210f7969f65eeaad3f5</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-01-31 13:11:19</sys_updated_on><type display_value="record">record</type></sys_security_acl></record_update>]]></payload>
+        <payload_hash>1191815576</payload_hash>
+        <record_name>task_sla</record_name>
+        <reverted_from/>
+        <source>3d19b26b83535210f7969f65eeaad348</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-31 13:11:20</sys_created_on>
+        <sys_id>6547a57b839f5210f7969f65eeaad374</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>194bc7cc2840000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-31 13:11:20</sys_updated_on>
+        <type>Access Control</type>
+        <update_guid>2d47a57bad9f5210be91ad5c2edb9b73</update_guid>
+        <update_guid_history>2d47a57bad9f5210be91ad5c2edb9b73:1191815576,3998fa2b9c5352102a1988ba5b963d8b:-1449361423</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-31 13:16:31</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl">sys_security_acl</sys_db_object>
+        <sys_id>0019fbbf3904427481bcbfe5061ded71</sys_id>
+        <sys_metadata>3198362b83535210f7969f65eeaad3f5</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>task_sla</sys_name>
+        <sys_package display_value="LearnSphere" source="x_1305322_learns_0">4297aaea8313d650f7969f65eeaad3aa</sys_package>
+        <sys_parent display_value="task_sla">dde45b24dcd212104f34465061b06a6c</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="LearnSphere">4297aaea8313d650f7969f65eeaad3aa</sys_scope>
+        <sys_scope_delete display_value="">0033d291911445c480c71bd7586e01c9</sys_scope_delete>
+        <sys_update_name>sys_security_acl_3198362b83535210f7969f65eeaad3f5</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_3198362b83535210f7969f65eeaad3f5">6547a57b839f5210f7969f65eeaad374</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-31 13:16:31</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
